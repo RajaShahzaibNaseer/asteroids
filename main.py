@@ -1,6 +1,6 @@
 from constants import *
 import pygame 
-import player
+from player import player
 
 def main():
     pygame.init()
@@ -10,11 +10,13 @@ def main():
     
     while True:
         screen.fill((0,0,0))
+        
+        main_player = player((SCREEN_WIDTH/2), (SCREEN_HEIGHT/2))
+        main_player.draw(screen)
+
         pygame.display.flip()
         time.tick(60)
 
-        player = player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
-        player.draw(screen)
 
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
