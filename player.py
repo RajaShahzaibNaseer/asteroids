@@ -2,7 +2,7 @@ from circleshape import CircleShape
 from constants import *
 import pygame as pygame
 
-class player(CircleShape):
+class Player(CircleShape):
     def __init__(self,x,y):
         super().__init__(x,y,PLAYER_RADIUS)
         self.rotation = 0
